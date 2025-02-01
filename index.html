@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold and Silver Cost Evaluator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container" role="main" aria-label="Gold and Silver Cost Evaluator">
+        <h1>Gold and Silver Cost Evaluator</h1>
+
+        <!-- Metal Prices Display -->
+        <section class="section" aria-label="Metal Prices">
+            <h2>Current Metal Prices</h2>
+            <p id="goldPrice">Gold: Fetching...</p>
+            <p id="silverPrice">Silver: Fetching...</p>
+        </section>
+
+        <!-- Metal Type Selection -->
+        <section class="section" aria-label="Metal Type Selection">
+            <label for="metalType">Select Metal:</label>
+            <select id="metalType" aria-label="Select Metal">
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+            </select>
+        </section>
+
+        <!-- Calculate Cost Section -->
+        <section class="section" aria-label="Calculate Metal Cost">
+            <h2>Calculate Metal Cost</h2>
+            <label for="metalWeight">Weight (grams):</label>
+            <input type="number" id="metalWeight" placeholder="Enter weight in grams" aria-label="Weight in grams">
+
+            <label for="metalPurity">Purity (%):</label>
+            <input type="number" id="metalPurity" placeholder="Enter purity percentage" aria-label="Purity in percentage">
+
+            <label for="metalPrice">Price per gram (optional):</label>
+            <input type="number" id="metalPrice" placeholder="Leave empty to use current price" aria-label="Price per gram">
+
+            <button onclick="calculateCost()" aria-label="Calculate Cost">Calculate Cost</button>
+            <p id="costResult"></p>
+        </section>
+
+        <!-- Calculate Purity Section -->
+        <section class="section" aria-label="Calculate Metal Purity">
+            <h2>Calculate Metal Purity</h2>
+            <label for="totalWeight">Total Weight (grams):</label>
+            <input type="number" id="totalWeight" placeholder="Enter total weight" aria-label="Total Weight in grams">
+
+            <label for="metalContentWeight">Metal Content Weight (grams):</label>
+            <input type="number" id="metalContentWeight" placeholder="Enter metal content weight" aria-label="Metal Content Weight">
+
+            <button onclick="calculatePurity()" aria-label="Calculate Purity">Calculate Purity</button>
+            <p id="purityResult"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
